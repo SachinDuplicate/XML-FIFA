@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="worldcup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FifaWorldcup" type="Comtype" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element name="matchList" type="Eletype" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Comtype">
+		<xs:group ref="childElements"/>
+		<xs:attributeGroup ref="attib"/>
+	</xs:complexType>
+
+	<xs:group name="childElements">
+		<xs:sequence>
+			<xs:element name="Title" type="xs:string"/>
+			<xs:element name="Organizer" type="xs:string"/>
+			<xs:element name="totalTeam" type="xs:string"/>
+			<xs:element name="ticketPrice" type="xs:string"/>
+			<xs:element name="contact" type="contacttype"/>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="contacttype">
+		<xs:group ref="Ctype"/>
+		
+	</xs:complexType>
+
+	<xs:group name="Ctype">
+		<xs:sequence>
+			<xs:element name="country" type='xs:string'/>
+			<xs:element name="URL" type='xs:string'/>
+		</xs:sequence>
+	</xs:group>
+	<xs:attributeGroup name="attib">
+		<xs:attribute name="info" type="xs:string"/>
+	</xs:attributeGroup>
+	
+	<xs:complexType name="Eletype">
+		<xs:group ref ="matchListtype"/>
+	
+	</xs:complexType>
+
+		<xs:group name="matchListtype">
+			<xs:sequence>
+				<xs:element name ="Matches" type="Mtype" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:group>
+
+		<xs:complexType name="Mtype">
+			<xs:group ref="Matchestype"/>
+		</xs:complexType>
+
+		<xs:group name="Matchestype">
+			<xs:sequence>
+				<xs:element name="match" type="machtype" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:group>
+
+		<xs:complexType name="machtype">
+			<xs:group ref ="matchtype"/>
+			<xs:attributeGroup ref="attri"/>
+		</xs:complexType>
+
+			<xs:group name="matchtype">
+				<xs:sequence>
+					<xs:element name ="Group" type="xs:string"/>
+					<xs:element name="Knockout" type="xs:string"/>
+					<xs:element name="quater-final" type="xs:string"/>
+					<xs:element name="semi-final" type="xs:string"/>
+					<xs:element name="Finalist" type="xs:string"/>
+					<xs:element name="Winner" type="xs:string"/>
+					<xs:element name="Runner-up" type="xs:string"/>
+					<xs:element name="Play-off" type="xs:string"/>
+					<xs:element name="Third" type="xs:string"/>
+					<xs:element name="Golden-Ball" type="xs:string"/>
+					<xs:element name="Golden-Boot" type="xs:string"/>
+					<xs:element name="Golden-Glove" type="xs:string"/>
+					<xs:element name="Best-Young-Player" type="xs:string"/>
+					<xs:element name="Fair-Play" type="xs:string"/>
+				</xs:sequence>
+			</xs:group>
+			<xs:attributeGroup name="attri">
+				<xs:attribute name="type" type="xs:string"/>
+			</xs:attributeGroup>
+</xs:schema>

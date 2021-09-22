@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name ="worldcup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FifaWorldcup"/>
+				<xs:element ref="matchList"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="FifaWorldcup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Title"/>
+				<xs:element ref="Organizer"/>
+				<xs:element ref="totalTeam"/>
+				<xs:element ref="ticketPrice"/>
+				<xs:element ref="contact"/>
+			</xs:sequence>
+			<xs:attribute ref="info"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Title" type="xs:string"/>
+	<xs:element name="Organizer" type="xs:string"/>
+	<xs:element name="totalTeam" type="xs:string"/>
+	<xs:element name="ticketPrice" type="xs:string"/>
+	<xs:element name="contact">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="country"/>
+				<xs:element ref="URL"/>
+			</xs:sequence>			
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="country" type="xs:string"/>
+	<xs:element name="URL" type ="xs:string"/>
+	<xs:attribute name="info">
+	</xs:attribute>
+
+	<xs:element name="matchList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Matches"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name = "Matches">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="match"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name ="match">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Group" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Knockout" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="quater-final" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="semi-final" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Finalist" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Winner" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Runner-up" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Play-off" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Third" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Golden-Ball" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Golden-Boot" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Golden-Glove" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Best-Young-Player" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Fair-Play" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute ref="type"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Group" type="xs:string"/>
+	<xs:element name="Knockout" type="xs:string" />
+	<xs:element name="quater-final" type="xs:string"/>
+	<xs:element name="semi-final" type="xs:string"/>
+	<xs:element name="Finalist" type="xs:string"/>
+	<xs:element name="Winner" type="xs:string"/>
+	<xs:element name="Runner-up" type="xs:string"/>
+	<xs:element name="Play-off" type="xs:string"/>
+	<xs:element name="Third" type="xs:string"/>
+	<xs:element name="Golden-Ball" type="xs:string"/>
+	<xs:element name="Golden-Boot" type="xs:string"/>
+	<xs:element name="Golden-Glove" type="xs:string"/>
+	<xs:element name="Best-Young-Player" type="xs:string"/>
+	<xs:element name="Fair-Play" type="xs:string"/>
+	<xs:attribute name="type">
+	</xs:attribute>
+</xs:schema>

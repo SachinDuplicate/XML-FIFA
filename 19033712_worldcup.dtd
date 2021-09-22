@@ -1,0 +1,32 @@
+<!ELEMENT worldcup (FifaWorldcup|matchList)*>
+<!ELEMENT FifaWorldcup (Title|Organizer|contact|totalTeam|ticketPrice|contact)*>
+<!ATTLIST FifaWorldcup  info CDATA #REQUIRED>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Organizer (#PCDATA)>
+<!ELEMENT totalTeam (#PCDATA)>
+<!ELEMENT ticketPrice (#PCDATA)>
+
+<!ELEMENT contact (country|URL)*>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT matchList (Matches)*>
+<!ELEMENT Matches (match)*>
+<!ELEMENT match (Group|Knockout|quater-final|semi-final|Golden-Ball|Golden-Boot|Golden-Glove|Best-Young-Player|Fair-Play|Finalist|Winner|Runner-up|Play-off|Third)*>
+<!ELEMENT Group (#PCDATA)>
+<!ELEMENT Knockout (#PCDATA)>
+<!ELEMENT quater-final (#PCDATA)>
+<!ELEMENT semi-final (#PCDATA)>
+<!ATTLIST match type CDATA #REQUIRED>
+
+<!ELEMENT Finalist (#PCDATA)>
+<!ELEMENT Winner (#PCDATA)>
+<!ELEMENT Runner-up (#PCDATA)>
+<!ELEMENT Play-off (#PCDATA)>
+<!ELEMENT Third (#PCDATA)>
+
+<!ELEMENT Golden-Ball (#PCDATA)>
+<!ELEMENT Golden-Boot (#PCDATA)>
+<!ELEMENT Golden-Glove (#PCDATA)>
+<!ELEMENT Best-Young-Player (#PCDATA)>
+<!ELEMENT Fair-Play (#PCDATA)>

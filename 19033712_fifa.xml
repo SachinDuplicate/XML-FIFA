@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="19033712_russiandoll.xsd"-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="19033712_venetianblind.xsd">
+<!--schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="19033712_flatcatalog.xsd"-->
+<!--DOCTYPE worldcup SYSTEM "19033712_worldcup.dtd"-->	
+	<worldcup>
+		<FifaWorldcup info ="Details">
+			<Title> FIFA Worldcup 2018 </Title>
+			<Organizer> 18030800 worldcup </Organizer>
+			<totalTeam> 32 </totalTeam>
+			<ticketPrice> USD 210-1100 </ticketPrice>
+
+		<contact>
+			<country> Russia </country>
+			<URL> https://www.fifa.com/contact </URL>
+		</contact>
+		</FifaWorldcup>
+
+		<matchList>
+			<Matches>
+				<match type ="Phases, FinalStanding, Awards">
+					<Group> 48 </Group>
+					<Knockout> 8 </Knockout>
+					<quater-final> 4 </quater-final>
+					<semi-final> 2 </semi-final>
+					<Finalist> France vs Croatia </Finalist>
+					<Winner> France </Winner>
+					<Runner-up> Croatia </Runner-up>
+					<Play-off> Belgium vs England </Play-off>
+					<Third> Belgium </Third>
+					<Golden-Ball> Luka Modric </Golden-Ball>
+					<Golden-Boot> Harry Kane </Golden-Boot>
+					<Golden-Glove> Thibaut Courtois </Golden-Glove>
+					<Best-Young-Player> Kylian Mbappe </Best-Young-Player>
+					<Fair-Play> Spain </Fair-Play>
+				</match>
+			</Matches>
+		</matchList>
+	</worldcup>
+</schema>
